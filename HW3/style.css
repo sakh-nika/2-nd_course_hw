@@ -299,6 +299,7 @@ body {
     height: 700px;
     background-image: url(images/header_mob.png);
     background-position: top;
+    padding-top: 147px;
   }
   .header__title {
     color: rgb(32, 32, 39);
