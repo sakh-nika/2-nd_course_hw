@@ -26,7 +26,9 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 196px;
+  box-sizing: border-box;
 }
 .header__title {
   max-width: 769px;
@@ -297,6 +299,7 @@ body {
     height: 700px;
     background-image: url(images/header_mob.png);
     background-position: top;
+    padding-top: 147px;
   }
   .header__title {
     color: rgb(32, 32, 39);
@@ -309,6 +312,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+    margin-bottom: 36px;
   }
   .header__button {
     width: 100%;
