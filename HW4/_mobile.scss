@@ -29,10 +29,9 @@
             width: 100%;
             max-width: 285px;
             height: 55px;
-            color: rgb(255, 255, 255);
             font-size: 16px;
             align-self: center;
-            pointer-events: none;
+            pointer-events: none; /*Убирает действие hover*/
         }
     }
 
@@ -80,11 +79,7 @@
             margin-bottom: 32px;
         }
         &__link {
-            width: 100%;
-            max-width: 285px;
-            height: 55px;
-            font-size: 16px;
-            align-self: center;
+            @extend .header__button;
                 &:hover {
                     background-color: rgb(32, 32, 39);
                     color: rgb(255, 255, 255);
