@@ -68,10 +68,10 @@ body {
         letter-spacing: 0;
         text-align: center;
 
-        &:hover {
-            background-color: rgb(255, 255, 255);
-            color: rgb(32, 32, 39);
-        }
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: rgb(32, 32, 39);
+            }
     }
 }
 
@@ -260,20 +260,7 @@ body {
     }
 
     &__link {
-        width: 247px;
-        height: 66px;
-        border: 1px solid rgb(32, 32, 39);
-        border-radius: 60px;
-        background: rgb(32, 32, 39);
-        padding: 16px 28px;
-        box-sizing: border-box;
-        text-decoration-line: none;
-        color: rgb(255, 255, 255);
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 141.69%;
-        letter-spacing: 0;
-        text-align: center;
+        @extend .header__button;
 
         &:hover {
             background-color: rgb(255, 255, 255);

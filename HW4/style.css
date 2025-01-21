@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +51,7 @@ body {
   text-align: left;
   margin-bottom: 48px;
 }
-.header__button {
+.header__button, .game__link {
   width: 247px;
   height: 66px;
   box-sizing: border-box;
@@ -66,7 +67,7 @@ body {
   letter-spacing: 0;
   text-align: center;
 }
-.header__button:hover {
+.header__button:hover, .game__link:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
@@ -231,22 +232,6 @@ body {
   text-align: left;
   margin-bottom: 36px;
 }
-.game__link {
-  width: 247px;
-  height: 66px;
-  border: 1px solid rgb(32, 32, 39);
-  border-radius: 60px;
-  background: rgb(32, 32, 39);
-  padding: 16px 28px;
-  box-sizing: border-box;
-  text-decoration-line: none;
-  color: rgb(255, 255, 255);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 141.69%;
-  letter-spacing: 0;
-  text-align: center;
-}
 .game__link:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
@@ -314,14 +299,13 @@ body {
     text-align: center;
     margin-bottom: 36px;
   }
-  .header__button {
+  .header__button, .game__link {
     width: 100%;
     max-width: 285px;
     height: 55px;
-    color: rgb(255, 255, 255);
     font-size: 16px;
     align-self: center;
-    pointer-events: none;
+    pointer-events: none; /*Убирает действие hover*/
   }
   .about-games {
     display: none;
@@ -362,13 +346,6 @@ body {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 32px;
-  }
-  .game__link {
-    width: 100%;
-    max-width: 285px;
-    height: 55px;
-    font-size: 16px;
-    align-self: center;
   }
   .game__link:hover {
     background-color: rgb(32, 32, 39);
