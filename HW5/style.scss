@@ -18,6 +18,7 @@ body {
 }
 
 .header {
+   position: relative;
     height: 800px;
     background-image: url(images/header_green.png);
     background-size: cover;
@@ -68,13 +69,63 @@ body {
         letter-spacing: 0;
         text-align: center;
 
-            &:hover {
-                background-color: rgb(255, 255, 255);
-                color: rgb(32, 32, 39);
-            }
+        &:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(32, 32, 39);
+        }
     }
 }
 
+.animated-strip {
+    position: absolute;
+    max-height: 90px;
+    background-color: rgb(188, 236, 48);
+    bottom: 0;
+    left: -30px;
+    right: 0;
+    padding: 27px 49px;
+    box-sizing: border-box;
+    overflow: hidden;
+ 
+
+    &__list {
+        max-height: 36px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 138px;
+
+        li {
+            position: relative;
+        }
+        
+        li::after {
+            position: absolute;
+            content: "";
+            width: 36px;
+            height: 36px;
+            background-image: url(images/star.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-left: 51px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        color: rgb(32, 32, 39);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 0;
+        text-align: left;
+        text-transform: uppercase;
+        white-space: nowrap; //содержимое элемента не переносится на новую строку
+    }
+}
 
 .about-games {
     background-image: url(images/black1.png);

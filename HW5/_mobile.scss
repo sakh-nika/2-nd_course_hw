@@ -35,6 +35,28 @@
         }
     }
 
+    
+.animated-strip {
+    left: -6px;
+    padding: 16px 24px;
+ 
+
+    &__list {
+        gap: 74px;
+
+        li::after {
+            background-image: url(images/star_mob.svg);
+            width: 20px;
+            height: 20px;
+            margin-left: 27px;
+        }
+    }
+
+    &__item {
+        font-size: 16px;
+    }
+}
+
     .about-games {
         display: none;
     }
@@ -52,6 +74,7 @@
             max-width: 100%;
             margin-top: 48px;
             align-content: center;
+            gap: 24px;
         }
     }
 

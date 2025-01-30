@@ -19,6 +19,7 @@ body {
 }
 
 .header {
+  position: relative;
   height: 800px;
   background-image: url(images/header_green.png);
   background-size: cover;
@@ -70,6 +71,52 @@ body {
 .header__button:hover, .game__link:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
+}
+
+.animated-strip {
+  position: absolute;
+  max-height: 90px;
+  background-color: rgb(188, 236, 48);
+  bottom: 0;
+  left: -30px;
+  right: 0;
+  padding: 27px 49px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.animated-strip__list {
+  max-height: 36px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 138px;
+}
+.animated-strip__list li {
+  position: relative;
+}
+.animated-strip__list li::after {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-image: url(images/star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 51px;
+}
+.animated-strip__item {
+  display: inline-block;
+  color: rgb(32, 32, 39);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .about-games {
@@ -307,6 +354,22 @@ body {
     align-self: center;
     pointer-events: none; /*Убирает действие hover*/
   }
+  .animated-strip {
+    left: -6px;
+    padding: 16px 24px;
+  }
+  .animated-strip__list {
+    gap: 74px;
+  }
+  .animated-strip__list li::after {
+    background-image: url(images/star_mob.svg);
+    width: 20px;
+    height: 20px;
+    margin-left: 27px;
+  }
+  .animated-strip__item {
+    font-size: 16px;
+  }
   .about-games {
     display: none;
   }
@@ -323,6 +386,7 @@ body {
     max-width: 100%;
     margin-top: 48px;
     align-content: center;
+    gap: 24px;
   }
   .game {
     max-width: 600px;

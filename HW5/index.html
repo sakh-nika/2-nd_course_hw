@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework-4</title>
+    <title>Homework-5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -18,6 +18,16 @@
         <p class="header__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <b>«Поехали!»</b>
             и <b>приступай</b>.</p>
         <a class="header__button" href="#about">Поехали!</a>
+        <div class="animated-strip">
+            <ul class="animated-strip__list">
+                <li class="animated-strip__item">Викторина</li>
+                <li class="animated-strip__item">Угадай число</li>
+                <li class="animated-strip__item">Переверни текст</li>
+                <li class="animated-strip__item">Простая арифметика</li>
+                <li class="animated-strip__item">Камень, ножницы, бумага</li>
+                <li class="animated-strip__item">Генератор случайных цветов</li>
+            </ul>
+        </div>
     </header>
     <section class="about-games center" id="about">
         <h2 class="about-games__title">Об играх</h2>
@@ -88,7 +98,7 @@
                 <div class="game__info">
                     <p class="game__name">Угадай число</p>
                     <p class="game__desc">Попробуй угадать случайное <br>число от 1 до 100.</p>
-                    <a class="game__link" href="#">Играть!</a>
+                    <a onclick="game(1, 100)" class="game__link" href="#">Играть!</a>
                 </div>
             </article>
             <article class="game" id="game_2">
@@ -136,7 +146,7 @@
     <footer class="footer center">
         <p class="footer__text">Все права защищены.</p>
     </footer>
-    <script src="hw-8.js"></script>
+    <script src="hw-11.js"></script>
 </body>
 
 </html>

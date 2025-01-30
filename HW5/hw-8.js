@@ -92,4 +92,72 @@ for (const item of numbers) {
 }
 console.log(minNumber);
 
+//Training
+const user = {
+nameUser: `Vika`,
+age: 30,
+city: `Yuzhno-Sakhalinsk`,
+getInfo() {
+    return `Пользователь ${user.nameUser}, возраст ${user.age}, проживает в городе ${user.city}.`;
+    }
+}
+console.log(user.getInfo());
+
+const square1 = {
+    width: 20,
+    height: 20,
+    getRectangleArea() {
+        return this.width * this.height;
+        },
+    getRectanglePerimeter() {
+        return (this.width + this.height) * 2;
+    } 
+}
+
+console.log(square1.getRectangleArea());
+console.log(square1.getRectanglePerimeter());
+    
+const square2 = {
+    width: 30,
+    height: 30,
+    getRectangleArea() {
+        return this.width * this.height;
+        },
+    getRectanglePerimeter() {
+        return (this.width + this.height) * 2;
+    } 
+}
+
+console.log(square2.getRectangleArea());
+console.log(square2.getRectanglePerimeter());
+    
+function getRectangleArea() {
+    return this.width * this.height;
+}
+
+function getRectanglePerimeter() {
+    return (this.width + this.height) * 2;
+}
+
+const square3 = {
+    width: 5,
+    height: 8,
+    getArea: getRectangleArea,
+    getPerimeter: getRectanglePerimeter,
+}
+
+const square4 = {
+    width: 12,
+    height: 6,
+    getArea: getRectangleArea,
+    getPerimeter: getRectanglePerimeter,
+
+}
+
+console.log(square3.getArea());
+console.log(square3.getPerimeter());
+console.log(square4.getArea());
+console.log(square4.getPerimeter());
+
+
 
