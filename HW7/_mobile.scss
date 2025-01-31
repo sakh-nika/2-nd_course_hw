@@ -1,0 +1,120 @@
+@media(max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        height: 700px;
+        background-image: url(images/header_mob.png);
+        background-position: top;
+        padding-top: 147px;
+
+        &__title {
+            color: rgb(32, 32, 39);
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+
+        &__text {
+            color: rgb(32, 32, 39);
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        &__button {
+            width: 100%;
+            max-width: 285px;
+            height: 55px;
+            font-size: 16px;
+            align-self: center;
+            pointer-events: none; /*Убирает действие hover*/
+        }
+    }
+
+    
+.animated-strip {
+    left: -6px;
+    padding: 16px 24px;
+ 
+
+    &__list {
+        gap: 74px;
+
+        li::after {
+            background-image: url(images/star_mob.svg);
+            width: 20px;
+            height: 20px;
+            margin-left: 27px;
+        }
+    }
+
+    &__item {
+        font-size: 16px;
+    }
+}
+
+    .about-games {
+        display: none;
+    }
+
+    .games {
+        align-content: center;
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
+        }
+        &__content {
+            max-width: 100%;
+            margin-top: 48px;
+            align-content: center;
+            gap: 24px;
+        }
+    }
+
+    .game {
+        max-width: 600px;
+        height: auto;
+        flex-direction: column;
+        &__img {
+            width: 100%;
+        }
+
+        &__info {
+            width: 100%;
+            padding: 29px 29px 32px 29px;
+        }
+        &__name {
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 16px;
+        }
+        &__desc {
+            max-width: 285px;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 32px;
+        }
+        &__button {
+            @extend .header__button;
+                &:hover {
+                    background-color: rgb(32, 32, 39);
+                    color: rgb(255, 255, 255);
+                }
+        }
+    }
+    .footer {
+        height: 100px;
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+}
