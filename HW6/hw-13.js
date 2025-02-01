@@ -119,8 +119,7 @@ numb = []
     }
     let sum = numb.reduce((total, numb) => total + numb, 0); // сумма всех чисел в массиве
     let arithmeticMean = sum / numb.length;
-    console.log(numb);
-    console.log(`Среднее арифметическое равно ${arithmeticMean}`);
+    console.log(numb, `Среднее арифметическое равно ${arithmeticMean}`);
 
     // или
 const numbFrom = Array.from({length: 6}, () => Math.floor(Math.random() * 10) + 1);
