@@ -52,7 +52,7 @@ body {
   text-align: left;
   margin-bottom: 48px;
 }
-.header__button, .game__link {
+.header__button, .game__button {
   width: 247px;
   height: 66px;
   box-sizing: border-box;
@@ -68,7 +68,7 @@ body {
   letter-spacing: 0;
   text-align: center;
 }
-.header__button:hover, .game__link:hover {
+.header__button:hover, .game__button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
@@ -154,10 +154,10 @@ body {
   display: block;
   grid-column: span 4;
   text-decoration-line: none;
+  transition: all 1s;
 }
 .about-games__link:hover {
   transform: scale(1.06);
-  transition: all 1s;
 }
 .about-games__link_1, .about-games__link_3 {
   grid-row: 1/2;
@@ -279,7 +279,10 @@ body {
   text-align: left;
   margin-bottom: 36px;
 }
-.game__link:hover {
+.game__button {
+  font-family: "Montserrat";
+}
+.game__button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
@@ -346,7 +349,7 @@ body {
     text-align: center;
     margin-bottom: 36px;
   }
-  .header__button, .game__link {
+  .header__button, .game__button {
     width: 100%;
     max-width: 285px;
     height: 55px;
@@ -411,7 +414,7 @@ body {
     line-height: 20px;
     margin-bottom: 32px;
   }
-  .game__link:hover {
+  .game__button:hover {
     background-color: rgb(32, 32, 39);
     color: rgb(255, 255, 255);
   }

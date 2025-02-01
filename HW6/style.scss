@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-   position: relative;
+    position: relative;
     height: 800px;
     background-image: url(images/header_green.png);
     background-size: cover;
@@ -86,7 +86,7 @@ body {
     padding: 27px 49px;
     box-sizing: border-box;
     overflow: hidden;
- 
+
 
     &__list {
         max-height: 36px;
@@ -100,7 +100,7 @@ body {
         li {
             position: relative;
         }
-        
+
         li::after {
             position: absolute;
             content: "";
@@ -160,16 +160,18 @@ body {
         grid-template-rows: 473px 7px 512px;
         gap: 32px;
         margin-top: 72px;
+
     }
 
     &__link {
         display: block;
         grid-column: span 4;
         text-decoration-line: none;
+        transition: all 1s; //не в :hover, а на самом блоке => анимация работает в обе стороны: плавно увеличивает и уменьшает
+
 
         &:hover {
             transform: scale(1.06);
-            transition: all 1s;
         }
 
         &_1,
@@ -197,6 +199,7 @@ body {
     width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
+
 
     &__img {
         width: 100%;
@@ -310,8 +313,9 @@ body {
         margin-bottom: 36px;
     }
 
-    &__link {
+    &__button {
         @extend .header__button;
+        font-family: "Montserrat";
 
         &:hover {
             background-color: rgb(255, 255, 255);

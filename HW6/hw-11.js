@@ -23,7 +23,7 @@ function game(min, max) {
             break;
         }
     }
-} 
+}
 
 
 //Задание 1
@@ -105,11 +105,11 @@ cube();
 // Задание 7
 
 function getCircleArea() {
-    return (3.14 * this.radius) ** 2;
+    return Math.PI * (this.radius ** 2);
 }
 
 function getCirclePerimetr() {
-    return 2 * 3.14 * this.radius;
+    return 2 * Math.PI * this.radius;
 }
 
 const circle1 = {
