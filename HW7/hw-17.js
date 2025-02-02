@@ -16,11 +16,9 @@ console.log(string);
 //чтобы регистр не влиял на результат.
 
 let getNewArray = (array, str) => {
-    let newArray = array.filter(item => item.toLowerCase().startsWith(str.toLowerCase()));
-    console.log(newArray);
+    return array.filter(item => item.toLowerCase().startsWith(str.toLowerCase()));
 }
-
-getNewArray(['день Понедельник', 'день Вторник','день Среда', 'день Четверг','день Пятница', 'выходной Суббота', 'выходной Воскресение'], 'Выходной');
+console.log(getNewArray(['день Понедельник', 'день Вторник','день Среда', 'день Четверг','день Пятница', 'выходной Суббота', 'выходной Воскресение'], 'Выходной'));
 
 // Задание 3
 // Округлить число 32.58884: До меньшего целого. До большего целого. До ближайшего целого.
@@ -28,47 +26,41 @@ let numb = 32.58884;
 let numbMin = Math.floor(numb);
 let numbMax = Math.ceil(numb);
 let numbRound = Math.round(numb);
-console.log(numbMin);
-console.log(numbMax);
-console.log(numbRound);
+console.log(numbMin, numbMax, numbRound);
+
 
 // Задание 4
 // Найти минимальное и максимальное значения из чисел 52, 53, 49, 77, 21, 32 и вывести их в консоль.
 
 let min = Math.min(52, 53, 49, 77, 21, 32);
 let max = Math.max(52, 53, 49, 77, 21, 32);
-console.log(min);
-console.log(max);
+console.log(min, max);
+
 
 
 // Задание 5
 // Создать функцию, которая выводит в консоль случайное число от 1 до 10.
 
-let num = Math.ceil(Math.random() * 10);
-console.log(num);
+let numRand = () => {
+    console.log(Math.floor(Math.random() * 10) + 1);
+}
+numRand();
 
 
 // Задание 6
 // Написать функцию, которая принимает целое число и возвращает массив случайных чисел от 0 до этого числа. Длина массива должна быть в два раза меньше переданного числа.
 
 let getArray = (num) => {
-    let arr = [];
-    let lenth = Math.floor(num / 2);
-    for (i = 0; i < lenth; i++) {
-    arr[i] = Math.floor(Math.random() * (num + 1));
-    }
-    console.log(arr);
+    return Array.from({length: Math.floor(num / 2)}, () => Math.floor(Math.random() * (num + 1)));
 }
-
-getArray(13);
+console.log(getArray(9));
 
 // Задание 7
 // Создать функцию, которая принимает два целых числа и возвращает случайное число в этом диапазоне.
 let getrandomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return (Math.floor(Math.random() * max) + min);
 }
-
-console.log(randomNumb(10, 30));
+console.log(randomNumb(2, 12));
 
 // Задание 8
 // Вывести в консоль текущую дату.
@@ -95,3 +87,4 @@ return 'Дата: ' + anyDate.getDate() + ' ' + months[anyDate.getMonth()] + ' '
 }
 console.log(getDateFormat(new Date('12/31/2024')));
 console.log(getDateFormat(new Date()));
+
