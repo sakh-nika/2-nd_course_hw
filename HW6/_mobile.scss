@@ -101,7 +101,7 @@
             line-height: 20px;
             margin-bottom: 32px;
         }
-        &__link {
+        &__button {
             @extend .header__button;
                 &:hover {
                     background-color: rgb(32, 32, 39);
