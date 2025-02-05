@@ -6,11 +6,15 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 // задание 2 Найдите индекс значения 4 в массиве
-numbers.forEach((i, index) => {
+numbers = [1, 5, 4, 10, 0, 3]
+numbers.forEach((i, index) => { // длинный путь
     if (i === 4) {
         console.log(`У ${i} индекс ${index}`);
     }
-});
+});  
+// или 
+console.log(numbers.indexOf(4)); // короткий путь
+
 
 //задание 3 С помощью метода join выведите элементы массива через пробел (пустую строку ' ')
 let numb = [1, 3, 5, 10, 20]
