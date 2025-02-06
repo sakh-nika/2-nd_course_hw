@@ -94,14 +94,14 @@ console.log(getSquared([2, 3, 4, 5, 6]));
 
 //задание 12 Создайте функцию, которая принимает на вход массив строк, а возвращает массив длины слов
 let getStringLength = (string) => {
-    return string.map(string => string.length);
+    return string.map(str => str.length);
     
 }
 console.log(getStringLength([`январь`, `февраль`, `март`])); // [6, 7, 4]
 
 //задание 13 Создайте функцию, которая принимает на вход массив целых чисел, а возвращает массив, содержащий только отрицательные значения.
 let getNegative = (numb) => {
-    return numb.filter(numb => numb < 0);
+    return numb.filter(num => num < 0);
 }
 console.log(getNegative([-1, 2, -3, 8, -6, 7 ]));
 
