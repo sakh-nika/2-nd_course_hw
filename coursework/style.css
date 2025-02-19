@@ -31,6 +31,7 @@ body {
   justify-content: flex-start;
   padding-top: 196px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .header__title {
   max-width: 769px;
@@ -74,23 +75,26 @@ body {
 }
 
 .animated-strip {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   position: absolute;
+  width: auto;
   max-height: 90px;
   background-color: rgb(188, 236, 48);
   bottom: 0;
   left: -30px;
-  right: 0;
+  right: auto;
   padding: 27px 49px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .animated-strip__list {
-  max-height: 36px;
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  max-height: 36px;
+  list-style-type: none;
   gap: 138px;
 }
 .animated-strip__list li {
@@ -118,11 +122,39 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 }
+.animated-strip__item:last-child {
+  margin-right: 138px;
+}
 
+.start-scrolling {
+  animation: start-scrolling 40s linear -20s infinite;
+}
+
+.next-scrolling {
+  position: absolute;
+  animation: next-scrolling 40s linear infinite;
+}
+
+@keyframes start-scrolling {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes next-scrolling {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .about-games {
   background-image: url(images/black1.png);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   padding-top: 94px;
   padding-bottom: 50px;
 }
@@ -219,6 +251,7 @@ body {
   flex-wrap: wrap;
   background-image: url(images/black2.png);
   background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 46px;
   padding-bottom: 144px;
 }
@@ -311,18 +344,53 @@ body {
     padding-left: calc(50% - 393px);
     padding-right: calc(50% - 393px);
   }
+  .about-games {
+    padding-top: 46px;
+  }
+  .about-games__box {
+    grid-template-rows: 371px 7px 412px;
+  }
+  .game-card__img {
+    height: 241px;
+  }
+  .game-card__info {
+    gap: 8px;
+    padding: 10px 12px 16px 16px;
+  }
+  .game-card__name {
+    font-size: 26px;
+    line-height: 28px;
+  }
   .games {
     align-content: center;
+    padding-bottom: 72px;
   }
   .games__content {
     max-width: 100%;
     align-content: center;
+    margin-top: 52px;
   }
   .game {
-    height: auto;
+    height: 380px;
   }
   .game__img {
     width: 50%;
+  }
+  .game__name {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 14px;
+  }
+  .game__info {
+    padding: 36px;
+  }
+  .game__desc {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 28px;
+  }
+  .footer {
+    height: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -372,6 +440,9 @@ body {
   }
   .animated-strip__item {
     font-size: 16px;
+  }
+  .animated-strip__item:last-child {
+    margin-right: 74px;
   }
   .about-games {
     display: none;

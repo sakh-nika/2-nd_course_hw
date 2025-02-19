@@ -30,6 +30,7 @@ body {
     justify-content: flex-start;
     padding-top: 196px;
     box-sizing: border-box;
+    overflow: hidden;
 
     &__title {
         max-width: 769px;
@@ -77,24 +78,26 @@ body {
 }
 
 .animated-strip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     position: absolute;
+    width: auto;
     max-height: 90px;
     background-color: rgb(188, 236, 48);
     bottom: 0;
     left: -30px;
-    right: 0;
+    right: auto;
     padding: 27px 49px;
     box-sizing: border-box;
-    overflow: hidden;
-
 
     &__list {
-        max-height: 36px;
-        list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        max-height: 36px;
+        list-style-type: none;
         gap: 138px;
 
         li {
@@ -123,14 +126,43 @@ body {
         letter-spacing: 0;
         text-align: left;
         text-transform: uppercase;
-        white-space: nowrap; //содержимое элемента не переносится на новую строку
+        white-space: nowrap; //элемент списка не переносится на новую строку
+            &:last-child {
+                margin-right: 138px;
+            }
+    }
+}
+.start-scrolling {
+    animation: start-scrolling 40s linear -20s infinite;
+
+}
+.next-scrolling {
+    position: absolute;
+    animation: next-scrolling 40s linear infinite;
+}
+
+@keyframes start-scrolling {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes next-scrolling {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 
 .about-games {
     background-image: url(images/black1.png);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     padding-top: 94px;
     padding-bottom: 50px;
 
@@ -246,6 +278,7 @@ body {
     flex-wrap: wrap;
     background-image: url(images/black2.png);
     background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 46px;
     padding-bottom: 144px;
 

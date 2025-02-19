@@ -1,0 +1,60 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+    }
+    .about-games {
+        padding-top: 46px;
+        &__box {
+            grid-template-rows: 371px 7px 412px;
+        }
+    }
+    .game-card {
+        &__img {
+            height: 241px;
+        }
+        &__info {
+            gap: 8px;
+            padding: 10px 12px 16px 16px;
+        }
+        &__name {
+            font-size: 26px;
+            line-height: 28px;
+        }
+    }
+    
+    .games {
+        align-content: center;
+        padding-bottom: 72px;
+
+        &__content {
+            max-width: 100%;
+            align-content: center;
+            margin-top: 52px;
+        }
+    }
+    .game {
+        height: 380px;
+
+        &__img {
+            width: 50%;
+        }
+        &__name {
+            font-size: 36px;
+            line-height: 40px;
+            margin-bottom: 14px;
+        }
+        &__info {
+            padding: 36px;
+        }
+        &__desc {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 28px;
+        }
+    }
+
+    .footer {
+        height: 100px;
+    }
+}

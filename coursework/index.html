@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework-8</title>
+    <title>Сoursework</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -19,7 +19,15 @@
             и <b>приступай</b>.</p>
         <a class="header__button" href="#about">Поехали!</a>
         <div class="animated-strip">
-            <ul class="animated-strip__list">
+            <ul class="animated-strip__list start-scrolling">
+                <li class="animated-strip__item">Викторина</li>
+                <li class="animated-strip__item">Угадай число</li>
+                <li class="animated-strip__item">Переверни текст</li>
+                <li class="animated-strip__item">Простая арифметика</li>
+                <li class="animated-strip__item">Камень, ножницы, бумага</li>
+                <li class="animated-strip__item">Генератор случайных цветов</li>
+            </ul>
+            <ul aria-hidden="true" class="animated-strip__list next-scrolling">
                 <li class="animated-strip__item">Викторина</li>
                 <li class="animated-strip__item">Угадай число</li>
                 <li class="animated-strip__item">Переверни текст</li>
@@ -138,7 +146,7 @@
                 <div class="game__info">
                     <p class="game__name">Генератор <br>случайных <br>цветов</p>
                     <p class="game__desc">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button type="button" class="game__button">Играть!</button>
+                    <button type="button" class="game__button" id="button-game_6">Играть!</button>
                 </div>
             </article>
         </div>
@@ -147,7 +155,6 @@
         <p class="footer__text">Все права защищены.</p>
     </footer>
     <script src="games.js"></script>
-    <script src="hw-18.js"></script>
     
 </body>
 
