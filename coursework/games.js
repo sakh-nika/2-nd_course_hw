@@ -162,7 +162,7 @@ function randomOption() {
 function game5() {
 
     for (let i = 0; i < 3; i++) { // функция повторится 3 раза
-        let userOption = prompt(`Камень, ножницы, бумага?`);
+        let userOption = prompt(`Выбери:\n Камень, ножницы, бумага?`);
         let compOption = randomOption();
         
         if (userOption.toLowerCase() === compOption.toLowerCase()) {
@@ -178,6 +178,20 @@ function game5() {
         }
     }
 }
+
+// Генератор случайных цветов
+// Описание: При каждом клике на кнопку фон страницы меняется на случайный цвет.
+// Требования: Создайте кнопку, которая при нажатии меняет цвет фона (или другого элемента) на случайный.
+
+const gamesBackgroundColor = document.querySelector('.games');
+const btnChangeBackgroundColor = document.querySelector('#button-game_6.game__button');
+    btnChangeBackgroundColor.addEventListener('click', () => {
+        gamesBackgroundColor.style.backgroundImage = 'none'; // убирает фоновое изображение
+        const randomColor = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16).padEnd(6, '0')}`;    
+        gamesBackgroundColor.style.backgroundColor = randomColor;
+        });
+        
+   
 
 
 
